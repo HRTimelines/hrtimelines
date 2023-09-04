@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HRTimelines - Form Draft</title>
+    <link rel="stylesheet" href="form-styles.css">
+
+</head>
+</html>
+
+<body>
+<!-- insert a header here -->
+<main>
+    <h1>Main form</h1>
+    <!-- this needs an action -->
+    <form>
+        <div class="section1">
+            <h2>Section 1: Demographic Information</h2>
+            <p>
+                This section will ask you about some basic demographic information include birthdate, country of origin, and some health indicators.
+            </p>     
+            <div class="questions">
+                <div id="dateOfBirth">
+                    <label for="dateOfBirth">What is your date of birth?</label>
+                    <input type="date" id="monthOfBirth" name="dateOfBirth">
+                </div><br><br>
+                
+                <div id="genderQuestion"></div><br><br>
+
+                <div id="raceQuestion"></div><br><br>
+
+                <label for="hormone-type">Are you on masculinizing or feminizing hormones?</label><br>
+                <input type="radio" name="hormone-type" value="Masculinizing">Masculinizing<br>
+                <input type="radio" name="hormone-type" value="Feminizing">Feminizing<br>
+            </div>
+        </div>
+
+        <div class="section2">
+            <h2>Section 2: Masculinizing HRT Information</h2>
+            <p>
+                this section will ask about a variety of health and medical information related to your masculinizing hormones.
+            </p>
+
+            <label for="masc-administration">
+                Please input your current hormone administration regime, concentration, start date, end date (or whether it is ongoing), and reason for stopping
+            </label><br><br>
+
+            <div id="mascAdministrationId"></div><br>
+            <div id="mascAdministrationButton">
+                <button type = button onclick="onButtonClick('masc-administraion', 'mascTable')"> Add new row </button>
+            </div>
+
+            <br><br>
+
+            <label for="masc-effects">Please check any effects you have experienced while on HRT, as well as start date, end date, or if the changes are ongoing. (these effects are not related to genetalia and sex)</label><br><br>
+            
+            <div id="mascEffectsId"></div><br><br>
+            <!-- need to add an "other" option -->
+
+            <label for="sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
+            <input type="radio" name="sex-questions-permission" value="yes">Yes, I am comfortable<br>
+            <input type="radio" name="sex-questions-permission" value="no">No, I would like to skip this section<br>
+        </div>
+
+        <div class="section3">
+            <h2>Masculinizing HRT and genetalia questions</h2>
+            <p>
+                this section will ask about your symptoms related to genetalia and sex.  If you are not comfortable answering these questions, please return to the previous section and select "no"
+            </p>
+
+            <!-- need label??? -->
+            <div id="mascEffectsSexId"></div>
+            <!-- need to add an "other" option to this too -->
+        </div>
+
+        <h2>Section 4: Feminizing HRT Information</h2>
+            <p>
+                this section will ask about a variety of health and medical information related to your feminizing hormones.
+            </p>
+
+            <label for="fem-administration">
+                Please input your current hormone administration regime, concentration, start date, end date (or whether it is ongoing), and reason for stopping
+            </label><br><br>
+
+            <!-- administration type question -->
+
+            <label for="fem-effects">Please check any effects you have experienced while on HRT, as well as start date, end date, or if the changes are ongoing. (these effects are not related to genetalia and sex)</label><br><br>
+            
+            <div id="femEffectsId"></div><br><br>
+            <!-- need to add an "other" option -->
+
+            <label for="fem-effects-period">Please select any cyclical period-like symptoms.  These are expected to last approximately 2-4 days, and repeat roughly every 28 days, though significant variation is expected</label>
+            <div id="femEffectsPeriodId"></div>
+
+            <!-- To decide if I want a constructor/how to deal with these two questions -->
+            <!-- <label for="sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
+            <input type="radio" name="sex-questions-permission" value="yes">Yes, I am comfortable<br>
+            <input type="radio" name="sex-questions-permission" value="no">No, I would like to skip this section<br> -->
+        </div>
+
+        <div class="section5">
+            <h2>Feminizing HRT and genetalia questions</h2>
+            <p>
+                this section will ask about your symptoms related to genetalia and sex.  If you are not comfortable answering these questions, please return to the previous section and select "no"
+            </p>
+
+            <!-- need label??? -->
+            <div id="femEffectsSexId"></div>
+            <!-- need to add an "other" option to this too -->
+        </div>
+
+        <div class="section6">
+            <h2>Other general questions</h2>
+            <p>
+                this section will ask some general health questions about masculinizing and feminizing HRT
+            </p>
+            <label for="medicationQuestion">Are you taking any (non-HRT) medications that may affect or interfere with any of the symptoms previously listed?</label>
+            <input type="text" name="medicationQuestion"> 
+            <br><br>
+                <!-- how do you make the above thing long? -->
+
+            <label for="conditionQuestion">Do you have any medical conditions that may affect or interfere with any of the symptoms previously listed?</label>
+            <input type="text" name="conditionQuestion">
+        </div> 
+
+        <div class="section7">
+            <h2>Final thoughts and comments</h2>
+            <p>
+                This section will collect a little more information and feedback about the survey<br><br>Additionally, if you are interested in being contacted further, please fill out this contact form: https://forms.gle/yMZFj6g3GHAHAp4U6.  We are also available on instagram @hrtimelines or by email at hrtimelines@gmail.com
+            </p>
+
+            <label for="surveyAdditions">Is there anything that you think should be added to this survey?</label>
+            <input type="text" name="surveyAdditions"><br><br>
+            
+            <label for="hrtExperience">Is there anything related to your experience with HRT that you want us to know?</label>
+            <input type="text" name="hrtExperience"><br><br>
+            
+            <label for="hrtFeedback">Do you have any other feedback for HRTimelines</label>
+            <input type="text" name="hrtFeedback"><br><br>
+        </div>
+    </form>
+</main>
+<script src="questionConstructor.js"></script>
+
+</body>

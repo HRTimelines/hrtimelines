@@ -33,15 +33,17 @@ function addDoseQuestionRow(name, tableId) {
     
     row = table.insertRow(-1)
     method = row.insertCell(0)
-    medication = row.insertCell(1)
-    amount = row.insertCell(2)
-    frequency = row.insertCell(3)
-    startDate = row.insertCell(4)
-    endDate = row.insertCell(5)
-    ongoing = row.insertCell(6)
-    termination = row.insertCell(7)
+    area = row.insertCell(1)
+    medication = row.insertCell(2)
+    amount = row.insertCell(3)
+    frequency = row.insertCell(4)
+    startDate = row.insertCell(5)
+    endDate = row.insertCell(6)
+    ongoing = row.insertCell(7)
+    termination = row.insertCell(8)
     
     method.innerHTML = '<input type="text" name=' + name + '></input>'
+    area.innerHTML = '<input type="text" name=' + name + '></input>'
     medication.innerHTML = '<input type="text" name=' + name + '></input>'
     amount.innerHTML = '<input type="text" name=' + name + '></input>'
     frequency.innerHTML = '<input type="text" name=' + name + '></input>'
@@ -53,7 +55,7 @@ function addDoseQuestionRow(name, tableId) {
 
 function constructDoseQuestion(id, name, tableId) {
     section = document.getElementById(id)
-    header = "<table id=" + tableId + "><tr> <th>Method</th> <th>Medication</th> <th>Amount</th> <th>Frequency</th> <th>Start Date</th> <th>End Date</th> <th>Ongoing?</th> <th>Reason for terminating<th> </tr>"
+    header = "<table id=" + tableId + "><tr> <th>Method</th> <th>Application Area</th> <th>Medication</th> <th>Amount</th> <th>Frequency</th> <th>Start Date</th> <th>End Date</th> <th>Ongoing?</th> <th>Reason for terminating<th> </tr>"
 
     section.innerHTML = header
     addDoseQuestionRow(name, tableId)
@@ -66,7 +68,7 @@ function onButtonClick(name, tableId) {
 
 let genderId = 'genderQuestion'
 let genderName = 'gender'
-let genderQuestionString = '<label for="gender">Damn bro whats ur gender</label><br>'
+let genderQuestionString = '<label for="gender">Which category(s) best describe you?  Select all that apply</label><br>'
 let genderArray = ["Male", 
     "Female", 
     "Genderfluid", 

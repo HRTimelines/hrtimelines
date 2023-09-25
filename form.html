@@ -28,6 +28,11 @@
 
                 <div id="raceQuestion"></div><br><br>
 
+                <div id="countryQuestion">
+                    <label for="country">In which country do you permanently reside?</label><br>
+                    <input type="text" id="countryId" name="country">
+                </div><br><br>
+
                 <label for="hormone-type">Are you on masculinizing or feminizing hormones?</label><br>
                 <input type="radio" name="hormone-type" value="Masculinizing">Masculinizing<br>
                 <input type="radio" name="hormone-type" value="Feminizing">Feminizing<br>
@@ -56,9 +61,9 @@
             <div id="mascEffectsId"></div><br><br>
             <!-- need to add an "other" option -->
 
-            <label for="sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
-            <input type="radio" name="sex-questions-permission" value="yes">Yes, I am comfortable<br>
-            <input type="radio" name="sex-questions-permission" value="no">No, I would like to skip this section<br>
+            <label for="masc-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
+            <input type="radio" name="masc-sex-questions-permission" value="yes">Yes, I am comfortable<br>
+            <input type="radio" name="masc-sex-questions-permission" value="no">No, I would like to skip this section<br>
         </div>
 
         <div class="section3">
@@ -89,12 +94,12 @@
             <!-- need to add an "other" option -->
 
             <label for="fem-effects-period">Please select any cyclical period-like symptoms.  These are expected to last approximately 2-4 days, and repeat roughly every 28 days, though significant variation is expected</label>
-            <div id="femEffectsPeriodId"></div>
+            <div id="femEffectsPeriodId"></div><br>
 
             <!-- To decide if I want a constructor/how to deal with these two questions -->
-            <!-- <label for="sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
-            <input type="radio" name="sex-questions-permission" value="yes">Yes, I am comfortable<br>
-            <input type="radio" name="sex-questions-permission" value="no">No, I would like to skip this section<br> -->
+            <label for="fem-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
+            <input type="radio" name="fem-sex-questions-permission" value="yes">Yes, I am comfortable<br>
+            <input type="radio" name="fem-sex-questions-permission" value="no">No, I would like to skip this section<br>
         </div>
 
         <div class="section5">
@@ -114,28 +119,28 @@
                 this section will ask some general health questions about masculinizing and feminizing HRT
             </p>
             <label for="medicationQuestion">Are you taking any (non-HRT) medications that may affect or interfere with any of the symptoms previously listed?</label>
-            <input type="text" name="medicationQuestion"> 
+            <textarea rows="4" cols="50" name="medicationQuestion"></textarea> 
             <br><br>
                 <!-- how do you make the above thing long? -->
 
             <label for="conditionQuestion">Do you have any medical conditions that may affect or interfere with any of the symptoms previously listed?</label>
-            <input type="text" name="conditionQuestion">
+            <textarea rows="4" cols="50" name="conditionQuestion"></textarea>
         </div> 
 
         <div class="section7">
             <h2>Final thoughts and comments</h2>
             <p>
-                This section will collect a little more information and feedback about the survey<br><br>Additionally, if you are interested in being contacted further, please fill out this contact form: https://forms.gle/yMZFj6g3GHAHAp4U6.  We are also available on instagram @hrtimelines or by email at hrtimelines@gmail.com
+                This section will collect a little more information and feedback about the survey<br><br>Additionally, if you are interested in further correspondence, please fill out this <a href=https://forms.gle/yMZFj6g3GHAHAp4U6>contact form</a>.  We are also available on instagram <a href=https://www.instagram.com/hrtimelines>@hrtimelines</a> or by email at hrtimelines@gmail.com
             </p>
 
-            <label for="surveyAdditions">Is there anything that you think should be added to this survey?</label>
-            <input type="text" name="surveyAdditions"><br><br>
+            <label for="surveyAdditions">Is there anything that you think should be added to this survey?</label><br>
+            <textarea rows="4" cols="50" name="surveyAdditions"></textarea><br><br>
             
-            <label for="hrtExperience">Is there anything related to your experience with HRT that you want us to know?</label>
-            <input type="text" name="hrtExperience"><br><br>
+            <label for="hrtExperience">Is there anything related to your experience with HRT that you want us to know?</label><br>
+            <textarea rows="4" cols="50" name="hrtExperience"></textarea><br><br>
             
-            <label for="hrtFeedback">Do you have any other feedback for HRTimelines</label>
-            <input type="text" name="hrtFeedback"><br><br>
+            <label for="hrtFeedback">Do you have any other feedback for HRTimelines?</label><br>
+            <textarea rows="4" cols="50" name="hrtFeedback"></textarea><br><br>
         </div>
     </form>
 </main>

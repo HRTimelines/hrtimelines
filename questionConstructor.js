@@ -96,9 +96,14 @@ let raceArray = ["East Asian",
     "South East Asian", 
     "Sub-Saharan African", 
     "White/European Descent"]
-
+    
 constructCheckboxQuestion(raceId, raceName, raceQuestionString, raceArray)
 
+mascAdministrationId = "mascAdministrationId"
+mascAdministrationName = "masc-administration"
+mascTableId = "mascTable"
+constructDoseQuestion(mascAdministrationId, mascAdministrationName, mascTableId)
+    
 mascEffectsId = "mascEffectsId"
 mascEffectsName = "masc-effects"
 mascEffectsString = ""
@@ -138,6 +143,11 @@ mascEffectsSexArray = ["Bottom Growth",
     "change in genital sensitivity and/or response"]
 
 constructEffectsQuestion(mascEffectsSexId, mascEffectsSexName, mascEffectsSexString, mascEffectsSexArray)
+
+femAdministrationId = "femAdministrationId"
+femAdministrationName = "fem-administration"
+femTableId = "femTable"
+constructDoseQuestion(femAdministrationId, femAdministrationName, femTableId)
 
 femEffectsId = "femEffectsId"
 femEffectsName = "fem-effects"
@@ -201,9 +211,3 @@ femEffectsSexArray = ["Increased Genital Sensitivity",
     "Reduced libido"]
 
 constructEffectsQuestion(femEffectsSexId, femEffectsSexName, femEffectsSexString, femEffectsSexArray)
-
-mascAdministrationId = "mascAdministrationId"
-mascAdministrationName = "masc-administration"
-mascTableId = "mascTable"
-
-constructDoseQuestion(mascAdministrationId, mascAdministrationName, mascTableId)

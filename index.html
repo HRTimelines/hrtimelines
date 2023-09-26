@@ -13,33 +13,39 @@
     <h1>Main form</h1>
     <!-- this needs an action -->
     <form>
-        <div class="section1">
+        <div class="section" id="section1">
             <h2>Demographic Information</h2>
             <p>
                 This section will ask you about some basic demographic information include birthdate, country of origin, and some health indicators.
             </p>     
-            <div class="questions">
-                <div id="dateOfBirth">
-                    <label for="dateOfBirth">What is your date of birth?</label><br>
-                    <input type="date" id="monthOfBirth" name="dateOfBirth">
-                </div><br><br>
-                
-                <div id="genderQuestion"></div><br><br>
+            <div id="dateOfBirth">
+                <label for="dateOfBirth">What is your date of birth?</label><br>
+                <input type="date" id="monthOfBirth" name="dateOfBirth">
+            </div><br><br>
+            
+            <div id="genderQuestion"></div><br><br>
 
-                <div id="raceQuestion"></div><br><br>
+            <div id="raceQuestion"></div><br><br>
 
-                <div id="countryQuestion">
-                    <label for="country">In which country do you permanently reside?</label><br>
-                    <input type="text" id="countryId" name="country">
-                </div><br><br>
+            <div id="countryQuestion">
+                <label for="country">In which country do you permanently reside?</label><br>
+                <input type="text" id="countryId" name="country">
+            </div><br><br>
 
+            <div id="hormoneType">
                 <label for="hormone-type">Are you on masculinizing or feminizing hormones?</label><br>
-                <input type="radio" name="hormone-type" value="Masculinizing">Masculinizing<br>
-                <input type="radio" name="hormone-type" value="Feminizing">Feminizing<br>
+                <input type="radio" name="hormone-type" value="masculinizing">Masculinizing<br>
+                <input type="radio" name="hormone-type" value="feminizing">Feminizing<br>
             </div>
+
+            <div id="section1Complete">
+                <button type = button onclick="showMascFem()"> Next Page </button>
+            </div>
+
+
         </div>
 
-        <div class="section2">
+        <div class="section" id="section2">
             <h2>Masculinizing HRT Information</h2>
             <p>
                 this section will ask about a variety of health and medical information related to your masculinizing hormones.
@@ -51,7 +57,7 @@
 
             <div id="mascAdministrationId"></div><br>
             <div id="mascAdministrationButton">
-                <button type = button onclick="onButtonClick('masc-administraion', 'mascTable')"> Add new row </button>
+                <button type=button onclick="onButtonClick('masc-administraion', 'mascTable')"> Add new row </button>
             </div>
 
             <br><br>
@@ -67,9 +73,13 @@
             <label for="masc-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
             <input type="radio" name="masc-sex-questions-permission" value="yes">Yes, I am comfortable<br>
             <input type="radio" name="masc-sex-questions-permission" value="no">No, I would like to skip this section<br>
+            
+            <div id="section2Complete">
+                <button type = button onclick="showMascSex()"> Next Page </button>
+            </div>
         </div>
 
-        <div class="section3">
+        <div class="section" id="section3">
             <h2>Masculinizing HRT and genetalia questions</h2>
             <p>
                 this section will ask about your symptoms related to genetalia and sex.  If you are not comfortable answering these questions, please return to the previous section and select "no"
@@ -77,12 +87,17 @@
 
             <!-- need label??? -->
             <div id="mascEffectsSexId"></div><br>
-            <label for="femSexEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
-            <textarea rows="4" cols="50" name="femEffectsQuestion"></textarea><br><br>
+            <label for="mascSexEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
+            <textarea rows="4" cols="50" name="mascEffectsQuestion"></textarea><br><br>
+
+            <div id="section3Complete">
+                <button type = button onclick="showHealth()"> Next Page </button>
+            </div>
             
         </div>
 
-        <h2>Feminizing HRT Information</h2>
+        <div class="section" id="section4">
+            <h2>Feminizing HRT Information</h2>
             <p>
                 this section will ask about a variety of health and medical information related to your feminizing hormones.
             </p>
@@ -91,7 +106,10 @@
                 Please input your current hormone administration regime, concentration, start date, end date (or whether it is ongoing), and reason for stopping
             </label><br><br>
 
-            <!-- administration type question -->
+            <div id="femAdministrationId"></div><br>
+            <div id="femAdministrationButton">
+                <button type=button onclick="onButtonClick('fem-administraion', 'femTable')"> Add new row </button>
+            </div><br><br>
 
             <label for="fem-effects">Please check any effects you have experienced while on HRT, as well as start date, end date, or if the changes are ongoing. (these effects are not related to genetalia and sex)</label><br><br>
             
@@ -108,9 +126,13 @@
             <label for="fem-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
             <input type="radio" name="fem-sex-questions-permission" value="yes">Yes, I am comfortable<br>
             <input type="radio" name="fem-sex-questions-permission" value="no">No, I would like to skip this section<br>
+
+            <div id="section4Complete">
+                <button type = button onclick="showFemSex()"> Next Page </button>
+            </div>
         </div>
 
-        <div class="section5">
+        <div class="section" id="section5">
             <h2>Feminizing HRT and genetalia questions</h2>
             <p>
                 this section will ask about your symptoms related to genetalia and sex.  If you are not comfortable answering these questions, please return to the previous section and select "no"
@@ -121,26 +143,34 @@
             <!-- need to add an "other" option to this too -->
             <label for="femSexEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
             <textarea rows="4" cols="50" name="femEffectsQuestion"></textarea><br><br>
+
+            <div id="section5Complete">
+                <button type = button onclick="showHealth()"> Next Page </button>
+            </div>
         </div>
 
-        <div class="section6">
+        <div class="section" id="section6">
             <h2>Other general questions</h2>
             <p>
                 this section will ask some general health questions about masculinizing and feminizing HRT
             </p>
-            <label for="medicationQuestion">Are you taking any (non-HRT) medications that may affect or interfere with any of the symptoms previously listed?</label>
+            <label for="medicationQuestion">Are you taking any (non-HRT) medications that may affect or interfere with any of the symptoms previously listed?</label><br>
             <textarea rows="4" cols="50" name="medicationQuestion"></textarea> 
             <br><br>
 
-            <label for="conditionQuestion">Do you have any medical conditions that may affect or interfere with any of the symptoms previously listed?</label>
+            <label for="conditionQuestion">Do you have any medical conditions that may affect or interfere with any of the symptoms previously listed?</label><br>
             <textarea rows="4" cols="50" name="conditionQuestion"></textarea>
             <br><br>
 
-            <label for="neurodiversityQuestion">Do you have any psychiatric disorders or neurodiversities that may affect or interfere with any of the symptoms previously listed?  Please indicate if you have a professional diagnosis or you are self-diagnosed</label>
+            <label for="neurodiversityQuestion">Do you have any psychiatric disorders or neurodiversities that may affect or interfere with any of the symptoms previously listed?  Please indicate if you have a professional diagnosis or you are self-diagnosed</label><br>
             <textarea rows="4" cols="50" name="neurodiversityQuestion"></textarea>
+
+            <div id="section5Complete">
+                <button type = button onclick="showFeedback()"> Next Page </button>
+            </div>
         </div> 
 
-        <div class="section7">
+        <div class="section" id="section7">
             <h2>Final thoughts and comments</h2>
             <p>
                 This section will collect a little more information and feedback about the survey<br><br>Additionally, if you are interested in further correspondence, please fill out this <a href=https://forms.gle/yMZFj6g3GHAHAp4U6>contact form</a>.  We are also available on instagram <a href=https://www.instagram.com/hrtimelines>@hrtimelines</a> or by email at hrtimelines@gmail.com
@@ -158,5 +188,6 @@
     </form>
 </main>
 <script src="questionConstructor.js"></script>
+<script src="formVisibility.js"></script>
 
 </body>

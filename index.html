@@ -14,13 +14,13 @@
     <!-- this needs an action -->
     <form>
         <div class="section1">
-            <h2>Section 1: Demographic Information</h2>
+            <h2>Demographic Information</h2>
             <p>
                 This section will ask you about some basic demographic information include birthdate, country of origin, and some health indicators.
             </p>     
             <div class="questions">
                 <div id="dateOfBirth">
-                    <label for="dateOfBirth">What is your date of birth?</label>
+                    <label for="dateOfBirth">What is your date of birth?</label><br>
                     <input type="date" id="monthOfBirth" name="dateOfBirth">
                 </div><br><br>
                 
@@ -40,7 +40,7 @@
         </div>
 
         <div class="section2">
-            <h2>Section 2: Masculinizing HRT Information</h2>
+            <h2>Masculinizing HRT Information</h2>
             <p>
                 this section will ask about a variety of health and medical information related to your masculinizing hormones.
             </p>
@@ -59,7 +59,10 @@
             <label for="masc-effects">Please check any effects you have experienced while on HRT, as well as start date, end date, or if the changes are ongoing. (these effects are not related to genetalia and sex)</label><br><br>
             
             <div id="mascEffectsId"></div><br><br>
-            <!-- need to add an "other" option -->
+
+            <label for="mascEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
+            <textarea rows="4" cols="50" name="mascEffectsQuestion"></textarea><br><br>
+    
 
             <label for="masc-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
             <input type="radio" name="masc-sex-questions-permission" value="yes">Yes, I am comfortable<br>
@@ -73,11 +76,13 @@
             </p>
 
             <!-- need label??? -->
-            <div id="mascEffectsSexId"></div>
-            <!-- need to add an "other" option to this too -->
+            <div id="mascEffectsSexId"></div><br>
+            <label for="femSexEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
+            <textarea rows="4" cols="50" name="femEffectsQuestion"></textarea><br><br>
+            
         </div>
 
-        <h2>Section 4: Feminizing HRT Information</h2>
+        <h2>Feminizing HRT Information</h2>
             <p>
                 this section will ask about a variety of health and medical information related to your feminizing hormones.
             </p>
@@ -96,6 +101,9 @@
             <label for="fem-effects-period">Please select any cyclical period-like symptoms.  These are expected to last approximately 2-4 days, and repeat roughly every 28 days, though significant variation is expected</label>
             <div id="femEffectsPeriodId"></div><br>
 
+            <label for="femEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
+            <textarea rows="4" cols="50" name="femEffectsQuestion"></textarea><br><br>
+
             <!-- To decide if I want a constructor/how to deal with these two questions -->
             <label for="fem-sex-questions-permission">The following section will have questions pertaining to genetalia and sex.  Are you comfortable answering these questions?</label><br>
             <input type="radio" name="fem-sex-questions-permission" value="yes">Yes, I am comfortable<br>
@@ -109,8 +117,10 @@
             </p>
 
             <!-- need label??? -->
-            <div id="femEffectsSexId"></div>
+            <div id="femEffectsSexId"></div><br>
             <!-- need to add an "other" option to this too -->
+            <label for="femSexEffectsQuestion">Are there any effects from HRT that we missed?</label><br>
+            <textarea rows="4" cols="50" name="femEffectsQuestion"></textarea><br><br>
         </div>
 
         <div class="section6">
@@ -121,10 +131,13 @@
             <label for="medicationQuestion">Are you taking any (non-HRT) medications that may affect or interfere with any of the symptoms previously listed?</label>
             <textarea rows="4" cols="50" name="medicationQuestion"></textarea> 
             <br><br>
-                <!-- how do you make the above thing long? -->
 
             <label for="conditionQuestion">Do you have any medical conditions that may affect or interfere with any of the symptoms previously listed?</label>
             <textarea rows="4" cols="50" name="conditionQuestion"></textarea>
+            <br><br>
+
+            <label for="neurodiversityQuestion">Do you have any psychiatric disorders or neurodiversities that may affect or interfere with any of the symptoms previously listed?  Please indicate if you have a professional diagnosis or you are self-diagnosed</label>
+            <textarea rows="4" cols="50" name="neurodiversityQuestion"></textarea>
         </div> 
 
         <div class="section7">

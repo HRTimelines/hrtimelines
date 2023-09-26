@@ -5,6 +5,9 @@ function constructCheckboxQuestion(id, name, questionString, optionsArray) {
         s = '<input type="checkbox" name=' + name + 'value=' + e + '>' + e + '<br>'
         questionString += s
     }
+
+    other = 'Other: <input type="text" name=' + name + '>'
+    questionString += other
     section.innerHTML = questionString
 }
 
@@ -83,7 +86,7 @@ constructCheckboxQuestion(genderId, genderName, genderQuestionString, genderArra
 
 let raceId = 'raceQuestion'
 let raceName = 'race'
-let raceQuestionString = '<label for="race">What category(s) best describe you?</label><br>'
+let raceQuestionString = '<label for="race">What category(s) best describe you?  Select all that apply</label><br>'
 let raceArray = ["East Asian", 
     "Black or African American", "Hispanic, Latino, or Spanish origin",
     "Middle Eastern or North African", 
@@ -121,8 +124,7 @@ mascEffectsArray = ["Deeper voice",
     "Increased muscle mass",
     "Facial feature changes",
     "Increased tolerance for caffeine/alcohol",
-    "Change in sexual orientation",
-    "Changes in ADHD symptoms (if applicable)"]
+    "Change in sexual orientation"]
 
 constructEffectsQuestion(mascEffectsId, mascEffectsName, mascEffectsString, mascEffectsArray)
 
